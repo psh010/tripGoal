@@ -3,11 +3,13 @@
     src: url('assets/fonts/AirbnbCereal_W_Bk.otf');
 }
 
-:root{
-    --color-black: #002248;
-    --color-blue: #3685FB;
-    --color-white: #FFF;
-}
+
+    $color-black: #002248;
+    $color-blue: #3685FB;
+    $color-white: #FFF;
+    $color-green: #00B3A0;
+
+
 
 
 body {
@@ -21,13 +23,17 @@ body {
         justify-content: space-around;
         align-items: center;
         height: 100px;
+        .logo>img:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+        }
         .menu {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             gap: 40px;  
          .menu__link {
-            color: var(--color-black);
+            color: $color-black;
             font-family: Airbnb;
             font-size: 16px;
             font-style: normal;
@@ -35,21 +41,25 @@ body {
             line-height: 18px;
             text-decoration: none;
             }
+            :hover{
+                opacity: 0.7;
+            }
+           
         }
         .register-button{
             width: 120px;
             height: 50px;
-            background-color: var(--color-blue);
+            background-color: $color-blue;
             border-radius: 10px;
             outline: none;
             border: 0;
-            :hover{
-                opacity: 0.7;
+            &:hover{
+                opacity: 0.8;
                 cursor: pointer;
             }
 
             .register-button__title {
-                color: var(--color-white);
+                color: $color-white;
                 text-align: center;
                 font-family: Airbnb;
                 font-size: 16px;
@@ -59,4 +69,69 @@ body {
             }
         }       
     }
+
+    .welcome {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .welcome-title{
+            display: flex;
+            flex-direction: column;
+            margin-top: 135px;
+
+            .welcome-title__link{
+                color: $color-green;
+                font-family: Airbnb;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px; 
+                &:hover{
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+            }
+           
+
+
+            .welcome-title__title-block{
+                display: flex;
+                flex-direction: row;
+
+                img{
+                    margin-left: 10px;
+                }
+           
+            }
+
+            .welcome-title__start-button{
+                margin-top: 50px;
+                width: 170px;
+                height: 60px;
+                background-color: $color-blue;
+                border-radius: 10px;
+                border: 0;
+                outline: none;
+                span{
+                    color: $color-white;
+                    font-family: Airbnb;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 20px; 
+                }
+                &:hover{
+                    opacity: 0.7;
+                    cursor: pointer;
+                }
+            }
+
+        }
+    
+    
+    
+    
+    }
+
 }   
