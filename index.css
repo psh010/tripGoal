@@ -62,7 +62,23 @@ body .header .register-button .register-button__title {
 body .welcome {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+body .welcome .welcome-img {
+  position: relative;
+  margin-top: 50px;
+}
+body .welcome .welcome-img > :nth-child(1) {
+  border-radius: 48%;
+  border: 10px solid #FFF;
+}
+body .welcome .welcome-img > :nth-child(2) {
+  border-radius: 48%;
+  position: absolute;
+  z-index: 2;
+  top: 170px;
+  left: 220px;
+  border: 10px solid #FFF;
 }
 body .welcome .welcome-title {
   display: flex;
@@ -84,9 +100,20 @@ body .welcome .welcome-title .welcome-title__link:hover {
 body .welcome .welcome-title .welcome-title__title-block {
   display: flex;
   flex-direction: row;
+  max-width: 590px;
 }
-body .welcome .welcome-title .welcome-title__title-block img {
-  margin-left: 10px;
+body .welcome .welcome-title .welcome-title__title-block .welcome-title__title {
+  color: #002248;
+  font-family: Eksell Display;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 72px;
+  text-transform: capitalize;
+}
+body .welcome .welcome-title .welcome-title__subtitle {
+  max-width: 513px;
+  text-wrap: balance;
 }
 body .welcome .welcome-title .welcome-title__start-button {
   margin-top: 50px;
@@ -108,4 +135,12 @@ body .welcome .welcome-title .welcome-title__start-button span {
 body .welcome .welcome-title .welcome-title__start-button:hover {
   opacity: 0.7;
   cursor: pointer;
+}
+@media (max-width: 1300px) {
+  body .welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }/*# sourceMappingURL=index.css.map */
